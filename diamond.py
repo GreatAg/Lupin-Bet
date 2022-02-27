@@ -12,21 +12,21 @@ from tenacity import retry, wait_fixed, stop_after_attempt
 import requests
 import wwresult
 
-TOKEN = '1351328826:AAGHSrELXj3uMel8addsZWJknpZA3ZLTSho'
+TOKEN = ##
 
 bot = telebot.TeleBot(token=TOKEN, num_threads=10)
 
-creators = [835478580, 638994540, 1258617062]
-partner = [835478580, 638994540, 1255111343, 1318109205]
-partners = {-1001476763360: [], -1001128468995: []}
-rolepartners = {-1001476763360: [], -1001128468995: []}
-personpartners = {-1001476763360: [], -1001128468995: []}
-nextbet = {-1001476763360: [], -1001128468995: []}
-checkrole = {-1001476763360: False, -1001128468995: False}
-betting = {-1001476763360: False, -1001128468995: False}
-rolling = {-1001476763360: False, -1001128468995: False}
-onPerson = {-1001476763360: False, -1001128468995: False}
-checkperson = {-1001476763360: False, -1001128468995: False}
+creators = []
+partner = []
+partners = {}
+rolepartners = {}
+personpartners = {}
+nextbet = {}
+checkrole = {}
+betting = {}
+rolling = {}
+onPerson = {}
+checkperson = {}
 players = {}
 teams = ['roosta', 'ferghe', 'ghatel', 'atash', 'gorg', 'monafegh']
 lupin = -1001476763360
@@ -85,11 +85,11 @@ def check_admin(chat_id, user_id):
 
 def check_group(message):
     chat_id = message.chat.id
-    groups = [-1001476763360, -1001128468995]
+    groups = []
     if chat_id not in groups:
         bot.send_message(chat_id, '''برای شرط بندی و استفاده از ربات در گروه زیر عضو شوید
 
-🔥 ᒪIᑎK : https://t.me/joinchat/aO3cMk0UriEyYmEx''')
+🔥 ᒪIᑎK : ''')
         bot.leave_chat(chat_id)
         return True
     else:
@@ -183,7 +183,7 @@ def banner(message):
             bot.send_message(user_id, """🔥فصل جديد بت هم اكنون آغاز شد و سوپرایز جدیدمون لوپین باکس معرفی شد
             🔥همین الان توی گپ جوین شو و شروع کن به المـ💎ـاس جمع کردن و لوپین باکس بخر
 
-🔥 ᒪIᑎK : https://t.me/joinchat/aO3cMk0UriEyYmEx""", disable_web_page_preview=True)
+🔥 ᒪIᑎK : """, disable_web_page_preview=True)
             j += 1
             time.sleep(2)
         except:
@@ -1938,7 +1938,7 @@ def poll():
             # bot.load_next_step_handlers()
             bot.polling(none_stop=True, timeout=234)
         except Exception as e:
-            bot.send_message(chat_id=638994540, text=e)
+            bot.send_message(chat_id=, text=e)
             raise e
 
 
