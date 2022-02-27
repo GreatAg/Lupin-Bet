@@ -1,10 +1,3 @@
-'''
-TGWerewolf python lib
-Written by @Arminshhhh
-ALL rights reserved
-'''
-
-
 class WWPlayer:
     def __init__(self, text_line, user_id=None):
         self._text_line = text_line
