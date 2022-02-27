@@ -1,6 +1,6 @@
 import psycopg2
 
-con = psycopg2.connect(host="94.130.7.131", database="solish", user="ali_ag", password="Im_FoCkinG-@g")
+con = psycopg2.connect(host="", database="", user="", password="")
 
 # cur = con.cursor()
 # cur.execute('''select user_id from ali_ag_db.registry ''')
